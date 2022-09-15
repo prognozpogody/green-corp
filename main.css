@@ -13,8 +13,13 @@ body {
 } 
 
 .form {
-  display: flex;
-  justify-content: center;
+  background-color: #1D263A;
+   color: #fff;
+   padding-top: 115px;
+   padding-bottom: 115px;
+   text-align: center;
+   display: flex;
+   justify-content: center;
 }
 .form__container {
   width: 550px;
@@ -50,7 +55,7 @@ body {
   margin-bottom: 15px;
 }
 
-.form input {
+.form input, .form select {
 font-size: 18px;
 color: #213053;
 height: 60px;
@@ -59,19 +64,16 @@ border-radius: 15px;
 border: none;
 }
 
-.form select {
-  font-size: 18px;
-  color: #213053;
-  height: 60px;
-  padding: 0px 0px 20px 20px;
-  border-radius: 15px;
-  border: none;
-}
-
 .form__submit {
+  border-radius: 15px;
+  width: 100%;
+  height: 60px;
+  background-color: rgb(22, 170, 29);
   font-size: 18px;
   font-weight: 600;
   margin-top: 40px;
+  color: white;
+  border: none;
 }
 
 select {
@@ -85,9 +87,6 @@ input {
 button:hover {
   background-color: #f6980c;
   box-shadow: 0 16px 36px rgba(246, 152, 12, 20%);
- 
-}
-button {
   transition: background-color 0.2s ease-in;
 }
 
@@ -99,7 +98,6 @@ footer {
 
 .footer__container {
 display: flex;
-align-items: center;
 justify-content: center;
 }
 
@@ -120,14 +118,20 @@ justify-content: center;
   padding-bottom: 15px;
 }
 
-.footer__links h3 {
-  font-size: 16px;
+footer h3 {
   opacity: 0.7;
-  padding-bottom: 30px;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: center;
+  
+
 }
 
 .footer__links a {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 15px;
+  margin-bottom: 15px;
+  color: white;
 }
