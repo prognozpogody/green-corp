@@ -8,6 +8,8 @@
  */
  /* 1 global */
 
+
+
 body {
   margin: 0;
 
@@ -22,7 +24,9 @@ header {
   display: flex; 
   justify-content: space-between;
   align-items: center;
-
+  position: sticky;
+  top: 0;
+  z-index: 1;
   padding: 20px;
 
   background-color: #fff;
@@ -31,6 +35,11 @@ header {
 a {
   text-decoration: none;
   color: #213053;
+}
+
+a:hover {
+color: #f6980c;
+transition: color 0.2s ease-in;
 }
 
 select { appearance: none; }
@@ -72,15 +81,25 @@ header a {
 
 .about__image { width: 500px; }
  
-.about__sun-image { width: 100px; height: 100px; }
+@keyframes rotation {
+  0% {transform: rotate(0deg);} 100% {transform: rotate(360deg);}
+}
+
+.about__sun-image { 
+ width: 100px; 
+ height: 100px;
+ position: absolute;
+
+ animation: rotation 10s infinite linear;
+}
 
 .about {
   display: flex;
   justify-content: space-around;
   align-items: center;
 
-  padding-top: 115px;
-  padding-bottom: 115px;
+
+  padding: 115px 20px;
 
   background: url('img/back.png') no-repeat;
   background-position: center;
@@ -179,7 +198,8 @@ header a {
 /* 5 footer */
 
 footer {
-  padding: 90px 20px 90px 20px ;
+  
+  padding: 90px 20px;
 
   font-size: 16px;
   font-weight: 600;
@@ -216,3 +236,67 @@ footer h3 {
 .footer__links { display: flex; flex-direction: center; }
 
 .footer__links a { margin-bottom: 15px; }
+
+@media (min-width: 320px) and (max-width: 720px) {
+  .header .about .form .footer {
+    padding: 10px 10px;
+    margin: 50px;
+  }
+  .form form{
+    padding: 10px 10px;
+  }
+
+.form__submit {
+  padding: 0px 10px;
+}
+  .about h1 {
+    font-size: 36px;
+    line-height: 40px;
+}
+ .footer__container {
+  display: block;
+ }
+  .header__logo {
+    height: 20px;
+  }
+  h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .about{
+    flex-direction: column-reverse;
+  }
+  .about__image {
+    width: 280px;
+  }
+  .about__sun-image {
+    width: 75px;
+    height: 75px;
+  }
+ }
+
+ @media (min-width: 720px) and (max-width: 1024px) {
+  .header .about .form .footer {
+    padding: 20px 20px;
+  }
+  .about h1 {
+    font-size: 36px;
+    line-height: 40px;
+}
+
+  .header__logo {
+    height: 20px;
+  }
+  h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .about__image {
+    width: 280px;
+  }
+  .about__sun-image {
+    width: 75px;
+    height: 75px;
+  }
+ }
