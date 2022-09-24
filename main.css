@@ -124,7 +124,17 @@ header a {
  
 }
 
-.about__info { max-width: 550px; }
+.about__info { 
+  max-width: 550px;
+  animation: animate__fadeInLeft;
+  
+ }
+
+.animate__animated.animate__fadeInLeft { animation-duration: 2s; }
+
+.about__images {animation: animate__fadeInRight;}
+
+.animate__animated.animate__fadeInRight { animation-duration: 2s; }
 
 /* 4 form */
 
